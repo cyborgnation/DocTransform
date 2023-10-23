@@ -6,7 +6,7 @@ from docx import Document
 htm_files = [f for f in os.listdir(os.getcwd()) if f.endswith('.htm')]
 
 for htm_file in htm_files:
-    with open(htm_file, "r") as f:
+    with open(htm_file, "r", encoding="ISO-8859-1") as f:
         contents = f.read()
 
     soup = BeautifulSoup(contents, 'lxml')
